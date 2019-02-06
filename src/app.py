@@ -9,4 +9,4 @@ if __name__ == '__main__':
                 pythonic_params=True,
                 # validate_responses=True, strict_validation=True
                 )
-    app.run(host=LOCAL, port=8668)
+    app.run(host=LOCAL, port=8668, threaded=True)

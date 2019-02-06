@@ -42,7 +42,7 @@ from geocoding.location import normalize_location
 
 
 def log():
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.WARNING)
     return logging.getLogger(__name__)
 
 
@@ -117,6 +117,7 @@ def _get_time_index(payload):
     In future, this could be enhanced with customs notifications where user
     specifies which attribute is to be used as "time index".
     """
+    # log().warn('>>>>>>>>>>>>>>>>>> in _get_time_index')
     if 'dateModified' in payload:
         return payload['dateModified']['value']
 
